@@ -8,9 +8,11 @@ import globalRouter from "./routers/globalRouter"
 import userRouter from "./routers/userRouter"
 import videoRouter from "./routers/videoRouter"
 import routes from "./routes"
-const app = express()
+
+const app = express();
 
 // middlewares
+app.set("view engine", "pug");
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
