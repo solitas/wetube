@@ -1,4 +1,9 @@
 extends layouts/main.pug
 
 block content
-    p login
+    .form__container
+        form(method="post", action="/login")
+            input(type="email", name="email", placeholder="E-mail")
+            input(type="password", name="password", placeholder="Password")
+            input(type="submit", value="Log In")
+        include partials/socialLogin
